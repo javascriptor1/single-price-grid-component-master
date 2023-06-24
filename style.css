@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+
+body {
+  display: grid;
+  margin: 2rem 0;
+  font-size: 1rem;
+  font-family: "Karla", sans-serif;
+  background-color: var(--light-gray);
+}
+.container {
+  width: 350px;
+  margin: 1.5rem auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 1px 3px rgb(171, 210, 247);
+  border-radius: 8px;
+}
+h1 {
+  color: var(--cyan);
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.details-div {
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  padding: 2rem;
+}
+.details-div h2 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--bright-yellow);
+  margin-bottom: 1rem;
+}
+.details-div p {
+  color: var(--grayish-blue);
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.subscription-div {
+  display: flex;
+  flex-direction: column;
+}
+.subscription-div__price-div {
+  background-color: var(--cyan);
+  padding: 2rem 2rem 0.1rem;
+  color: var(--light-gray);
+}
+
+.subscription-div__price-div h2 {
+  color: var(--light-gray);
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.subscription-div__whyus-div {
+  padding: 2rem;
+  background-color: hsl(179, 47%, 52%);
+  color: var(--light-gray);
+  border-radius: 0 0 8px 8px;
+}
+.subscription-div__monthly-price {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.subscription-div__per-month {
+  font-weight: 100;
+  color: hsla(203, 44%, 93%, 0.685);
+  font-size: 14px;
+}
+button {
+  background-color: var(--bright-yellow);
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  color: var(--light-gray);
+  font-weight: 700;
+  border-radius: 8px;
+  margin-top: 1.7rem;
+  margin-bottom: 1.2rem;
+  box-shadow: 1px 1px 1px 3px hsl(179, 62%, 43%);
+  cursor: pointer;
+}
+
+.subscription-div__whyus-div h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.subscription-div__whyus-div li {
+  color: hsl(172.45deg 100% 87.83%);
+  list-style: none;
+  margin-bottom: 0.2rem;
+}
+
+
+/* Media queries for > 820px sizes */
+
+@media (min-width:820px) {
+    
+    body {
+        min-height: 100vh;
+        place-content: center;
+    }
+    .subscription-div {
+        flex-direction: row;
+    }
+    .container {
+        width: 620px;
+        margin: 1.5rem auto;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 4px 12px 20px 1px rgb(171, 210, 247);
+        border-radius: 8px;
+      }
+      .subscription-div__whyus-div {
+        
+        border-radius: 0 0 8px 0px;
+        flex: 1;
+      }
+      .details-div p {
+        color: var(--grayish-blue);
+        line-height: 1.5;
+        font-size: 1rem;
+      }
+      .subscription-div__price-div h2 {
+        font-size: 1.2rem;
+      }
+
+      .subscription-div__whyus-div li {
+        font-size: 0.8rem;
+      }
+}
